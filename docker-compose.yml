@@ -1,9 +1,9 @@
 services:
-  3x-ui:
+  h-3x-ui:
     build: .
-    container_name: hypoxie-3x-ui
+    container_name: h-3x-ui
     ports:
-      - "13841:54321"
+      - "13841:2053"
     volumes:
-      - ./data:./db
+      - ./data:/opt/x-ui/db
     restart: always
