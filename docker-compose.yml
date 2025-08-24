@@ -1,0 +1,9 @@
+services:
+  3x-ui:
+    build: .
+    container_name: hypoxie-3x-ui
+    ports:
+      - "13841:54321"
+    volumes:
+      - ./data:./db
+    restart: always
