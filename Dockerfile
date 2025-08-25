@@ -1,4 +1,4 @@
-FROM alpine:3.18
+FROM debian:bullseye-slim
 
 RUN apk add --no-cache bash curl tar ca-certificates
 
