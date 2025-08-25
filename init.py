@@ -12,7 +12,6 @@ services:
   {name}-3x-ui:
     build: .
     container_name: {name}-3x-ui
-    image: alireza0/x-ui:latest
     volumes:
       - ./data:/opt/x-ui/db
     networks:
