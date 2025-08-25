@@ -1,9 +1,0 @@
-services:
-  h-3x-ui:
-    build: .
-    container_name: h-3x-ui
-    ports:
-      - "13841:2053"
-    volumes:
-      - ./data:/opt/x-ui/db
-    restart: always
