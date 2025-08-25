@@ -10,13 +10,18 @@ with open("docker-compose.yml", "w+") as file:
 	file.write('''
 services:
   {name}-3x-ui:
-    build: .
+    image: metaligh/3x-ui:latest
+    hostname: hypoxie-xui.duckdns.org
     container_name: {name}-3x-ui
     volumes:
       - ./data:/opt/x-ui/db
+      - /etc/letsencrypt/:/etc/letsencrypt/:rw
+    environment:
+      XRAY_VMESS_AEAD_FORCED: "false"
+    tty: true
     networks:
       - nginx_network_external
-    restart: always
+    restart: unless-stopped
 
 networks:
   nginx_network_external:
