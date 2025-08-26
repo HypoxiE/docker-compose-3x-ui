@@ -10,7 +10,7 @@ with open("docker-compose.yml", "w+") as file:
 	file.write('''
 services:
   {name}-3x-ui:
-    image: metaligh/3x-ui:latest
+    build: .
     hostname: hypoxie-xui.duckdns.org
     container_name: {name}-3x-ui
     volumes:
