@@ -18,6 +18,8 @@ services:
       - /etc/letsencrypt/:/etc/letsencrypt/:rw
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
+    ports:
+      - "2053:2053"
     tty: true
     networks:
       - nginx_network_external
