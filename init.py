@@ -26,6 +26,7 @@ with open("docker-compose.yml", "w+") as file:
 services:
   {name}-3x-ui:
     build: .
+    image: {name}-3x-ui
     container_name: {name}-3x-ui
     volumes:
       - $PWD/db/:/etc/x-ui/
