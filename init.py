@@ -28,7 +28,7 @@ services:
     build: .
     container_name: {name}-3x-ui
     volumes:
-      - ./data:/opt/x-ui/db
+      - $PWD/db/:/etc/x-ui/
       - /etc/letsencrypt/:/etc/letsencrypt/:rw
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
