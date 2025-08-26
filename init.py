@@ -19,7 +19,7 @@ services:
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
     ports:
-      - "444:80"
+      - "445:80"
     tty: true
     networks:
       - nginx_network_external
