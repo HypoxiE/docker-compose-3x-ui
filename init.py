@@ -11,7 +11,6 @@ with open("docker-compose.yml", "w+") as file:
 services:
   {name}-3x-ui:
     build: .
-    hostname: hypoxie-xui.duckdns.org
     container_name: {name}-3x-ui
     volumes:
       - ./data:/opt/x-ui/db
